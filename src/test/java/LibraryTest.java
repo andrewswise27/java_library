@@ -34,4 +34,9 @@ public class LibraryTest {
         library.addBookToStock(new Book("Peter", "Hello", "Drama"));
         assertEquals("Stock is full!", library.addBookToStock(new Book("Hi", "Hi", "Hi")));
     }
+
+    @Test
+    public void numberOfFantasy(){
+        assertEquals(2, library.checkGenreNum("Fantasy"));
+    }
 }

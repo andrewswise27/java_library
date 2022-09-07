@@ -20,6 +20,7 @@ public class Library {
     public String addBookToStock(Book book){
         if (capacity > sizeOfStock()){
             this.stock.add(book);
+            this.addToGenreHashmap(book);
             return "Added to stock!";
 
         }
@@ -40,5 +41,9 @@ public class Library {
         } else {
             this.genres.put(genre, 1);
         }
+    }
+
+    public int checkGenreNum(String genre) {
+        return this.genres.get(genre);
     }
 }
