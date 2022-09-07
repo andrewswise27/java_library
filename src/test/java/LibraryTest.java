@@ -36,7 +36,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void numberOfFantasy(){
+    public void canCountBooksByGenre(){
         assertEquals(2, library.checkGenreNum("Fantasy"));
     }
 }
