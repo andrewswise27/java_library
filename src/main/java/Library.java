@@ -29,4 +29,16 @@ public class Library {
     public Book lendBook(){
         return this.stock.remove(0);
     }
+
+    public void addToGenreHashmap(Book book){
+
+        String genre = book.getGenre();
+        if(this.genres.containsKey(genre)){
+            int counter = genres.get(genre);
+            counter++;
+            this.genres.put(genre, counter);
+        } else {
+            this.genres.put(genre, 1);
+        }
+    }
 }
